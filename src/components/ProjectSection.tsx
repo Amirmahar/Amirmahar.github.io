@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ProjectItem } from '../types';
-import { Brain, Layers, ChevronDown, ChevronUp, Clock, FileSpreadsheet, MapPin, Users, HeartHandshake } from 'lucide-react';
+import { Brain, Layers, ChevronDown, ChevronUp, Clock, FileSpreadsheet, MapPin, Users, HeartHandshake, ArrowUpRight, FolderGit2 } from 'lucide-react';
 
 const PROJECTS: ProjectItem[] = [
   {
@@ -211,6 +211,42 @@ export default function ProjectSection() {
               </div>
             );
           })}
+
+          {/* "More projects" tile — fills the trailing grid cell */}
+          <a
+            href="#contact"
+            id="project-card-more"
+            className="group flex flex-col justify-between p-6 md:p-8 rounded-xl border border-dashed border-black/15 bg-neutral-50/60 hover:border-black/40 hover:bg-neutral-50 transition-all duration-300 cursor-pointer"
+          >
+            <div>
+              <div className="flex justify-between items-center mb-6">
+                <div className="w-10 h-10 rounded-lg bg-neutral-900 flex items-center justify-center">
+                  <FolderGit2 className="w-5 h-5 text-white" />
+                </div>
+                <span className="text-[10px] font-mono font-bold tracking-wider text-neutral-600 bg-white px-2.5 py-1 rounded-full border border-black/5">
+                  20+ shipped
+                </span>
+              </div>
+
+              <h3 className="text-xl font-display font-bold text-neutral-900 group-hover:text-black transition-colors mb-3">
+                20+ More Projects
+              </h3>
+              <p className="text-sm text-brand-slate font-sans leading-relaxed mb-6">
+                Scrapers, AI agents, and custom automation pipelines built for clients across different industries. Want the full breakdown for your use case?
+              </p>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                <span className="text-[10px] font-mono font-medium tracking-wide px-2.5 py-1 rounded bg-white text-brand-slate uppercase border border-black/[0.06]">Automation</span>
+                <span className="text-[10px] font-mono font-medium tracking-wide px-2.5 py-1 rounded bg-white text-brand-slate uppercase border border-black/[0.06]">AI Agents</span>
+                <span className="text-[10px] font-mono font-medium tracking-wide px-2.5 py-1 rounded bg-white text-brand-slate uppercase border border-black/[0.06]">Scraping</span>
+              </div>
+            </div>
+
+            <div className="mt-6 pt-4 border-t border-black/[0.04] w-full flex items-center justify-between text-xs font-mono text-neutral-900 font-semibold group-hover:border-black/10">
+              <span>Request the full portfolio</span>
+              <ArrowUpRight className="w-4 h-4 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+            </div>
+          </a>
         </div>
 
         {/* Technical Capabilities segment based on mockup bottom */}

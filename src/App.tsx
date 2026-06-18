@@ -58,7 +58,7 @@ export default function App() {
           {/* Section 0: Hero Showcase */}
           <section className="relative pt-16 md:pt-28 pb-20 overflow-hidden">
             <div className="absolute inset-0 dot-grid opacity-75 z-0"></div>
-            
+
             {/* Glowing mesh accents */}
             <div className="absolute top-1/4 right-1/12 w-80 h-80 rounded-full bg-indigo-200/20 blur-[120px] pointer-events-none"></div>
             <div className="absolute top-1/2 left-1/12 w-72 h-72 rounded-full bg-sky-200/20 blur-[100px] pointer-events-none"></div>
